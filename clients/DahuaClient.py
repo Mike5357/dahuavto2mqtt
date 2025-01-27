@@ -47,7 +47,7 @@ class DahuaClient(BaseClient):
                 client = loop.create_connection(
                     lambda: DahuaAPI(self.outgoing_events, self.dahua_config, self._set_api),
                     self.dahua_config.host,
-                    5000
+                    35000
                 )
 
                 self.is_connected = True
